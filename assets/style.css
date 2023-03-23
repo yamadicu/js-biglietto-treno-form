@@ -1,0 +1,14 @@
+section img{
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.contenuto{
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    background-color: rgb(0, 0, 0, 0.7);
+    border-radius: 25px;
+}

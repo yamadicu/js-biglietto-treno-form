@@ -9,6 +9,7 @@ function conferma(){
 
     let chilometri = document.getElementById('chilometri').value;
     let eta = parseInt(document.getElementById('eta').value);
+    let titolare = document.getElementById('titolare').value;
     
 
     let prezzo = chilometri * 0.21;
@@ -17,7 +18,6 @@ function conferma(){
 
     let prezzoAnziani = prezzo - ( prezzo * 0.40);
 
-    console.log(eta);
 
     if( eta < 18 ){
 
