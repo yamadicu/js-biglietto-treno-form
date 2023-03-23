@@ -12,3 +12,16 @@ section img{
     background-color: rgb(0, 0, 0, 0.7);
     border-radius: 25px;
 }
+
+#biglietto{
+    background-color: rgb(255, 215, 0, 0.7);
+    margin: 20px;
+    margin-inline: 100px;
+    border-radius: 25px;
+}
+
+#passeggero div{
+    margin-inline: 4rem;
+    display: flex;
+    flex-direction: column;
+}

@@ -14,25 +14,49 @@ function conferma(){
 
     let prezzo = chilometri * 0.21;
 
-    let prezzoMinori = prezzo - ( prezzo * 0.20 );
+    let prezzoFinale;
 
-    let prezzoAnziani = prezzo - ( prezzo * 0.40);
+    // let prezzoMinori = prezzo - ( prezzo * 0.20 );
+
+    // let prezzoAnziani = prezzo - ( prezzo * 0.40);
 
 
     if( eta < 18 ){
 
-        document.writeln(`<p> Ciao, il prezzo del tuo biglietto è di: ${prezzoMinori.toFixed(2)}€</p>`)
+        document.getElementById('categoria').innerHTML = 'minorenne';
+
+        prezzoFinale = prezzo - (prezzo * 0.20); 
 
     }
     else if ( eta > 65 ){
 
-        document.writeln(`<p> Ciao, il prezzo del tuo biglietto è di: ${prezzoAnziani.toFixed(2)}€</p>`)
+        prezzoFinale = prezzo - (prezzo * 0.40); 
+        
+        document.getElementById('categoria').innerHTML = 'anziani';
 
     }
     else{
 
-        document.writeln(`<p> Ciao, il prezzo del tuo biglietto è di: ${prezzo}€</p>`)
+       prezzoFinale = prezzo;
+
+       document.getElementById('categoria').innerHTML = 'maggiorenni';
         
     }
+
+    document.getElementById('bigliettodi').innerHTML = `${titolare}`;
+
+    prezzoFinale = prezzoFinale.toFixed(2);
+
+    document.getElementById('prezzoFinale').innerHTML = `${prezzoFinale}`;
+
+}
+
+function cancella(){
+
+    document.getElementById('eta').value = "";
+
+    document.getElementById('chilometri').value = "";
+
+    document.getElementById('titolare').value = "";
 
 }

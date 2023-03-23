@@ -45,40 +45,86 @@
 
     <img src="./assets/img/treno.jpeg" alt="">
 
-    <div class="back">
-
-      <div class="contenuto container text-center my-3 ">
+    <div>
+         
+      <div class="contenuto text-center container">
         
-        <span class="fs-1 text-uppercase text-light">
-          inserisci i tuoi dati per acquistare i tuoi biglietti
-        </span>
-        
-        <div class="d-flex justify-content-center row my-3">
+        <!-- INSERIMENTO DATI -->
+        <div class="container my-3 ">
           
-          <!-- TITOLARE -->
-          <div class="mb-3 col-3">
-            <label for="titolare" class="form-label text-light">a chi è intestato il biglietto?</label>
-            <input type="text" class="form-control" id="titolare">
-          </div>
+          <span class="fs-1 text-uppercase text-light">
+            inserisci i tuoi dati per acquistare i tuoi biglietti
+          </span>
           
-          <!-- ETA' -->
-          <div class="mb-3 col-3">
-            <label for="eta" class="form-label text-light">inserisci la tua età</label>
-            <input type="number" class="form-control" id="eta">
-          </div>
-          
-          <!-- CHILOMETRI DA PERCORRERE -->
-          <div class="mb-3 col-3">
+          <div class="d-flex justify-content-center row my-3">
             
-            <label for="chilometri" class="form-label text-light">Quanti chilometri vuoi percorrere?</label>
-            <input type="text" class="form-control" id="chilometri" aria-describedby="chilometri">
+            <!-- TITOLARE -->
+            <div class="mb-3 col-3">
+              <label for="titolare" class="form-label text-light">a chi è intestato il biglietto?</label>
+              <input type="text" class="form-control" id="titolare">
+            </div>
+            
+            <!-- ETA' -->
+            <div class="mb-3 col-3">
+              <label for="eta" class="form-label text-light">inserisci la tua età</label>
+              <input type="number" class="form-control" id="eta">
+            </div>
+            
+            <!-- CHILOMETRI DA PERCORRERE -->
+            <div class="mb-3 col-3">
+              
+              <label for="chilometri" class="form-label text-light">Quanti chilometri vuoi percorrere?</label>
+              <input type="text" class="form-control" id="chilometri" aria-describedby="chilometri">
+              
+            </div>
+            
+          </div>
+          
+          <button type="submit" class="btn btn-primary mb-3" onclick="conferma()">Submit</button>
+
+          <button type="submit" class="btn btn-primary mb-3" onclick="cancella()">Cancella</button>
+          
+        </div>
+        
+        <!-- BIGLIETTO -->
+        <div>
+          
+          <span class="fs-1 text-uppercase text-light">
+            ecco il tuo biglietto
+          </span>
+          
+          <div id="biglietto">
+            <span class="text-light">Categoria:</span> <span class="text-light" id="categoria"></span>
+            
+            <div class="d-flex flex-row justify-content-center" id="passeggero">
+              
+              <div>
+                
+                <span class="text-light">Intestatario Biglietto:</span>
+                <span class="text-light" id="bigliettodi"></span>
+                
+              </div>
+              
+              <div>
+                
+                <span class="text-light">Tratta</span>
+                <span class="text-light">1452</span>
+                
+              </div>
+              
+              <div>
+                
+                <span class="text-light">Prezzo</span>
+                <span class="text-light" id="prezzoFinale"></span>
+                
+              </div>
+              
+            </div>
             
           </div>
           
         </div>
         
-        <button type="submit" class="btn btn-primary mb-3" onclick="conferma()">Submit</button>
-
       </div>
 
     </div>
